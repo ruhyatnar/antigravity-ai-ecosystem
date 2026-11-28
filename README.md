@@ -12,6 +12,7 @@ Koleksi konfigurasi lengkap, terstandarisasi, dan teruji untuk **Google Antigrav
   * `mcp-builder` & `skill-creator`: Toolkit pembuat dan benchmarking skill/MCP server.
 * **Code Intelligence**:
   * `graphify`: Knowledge graph codebase lokal via deterministik AST (caller, callees, dependensi, dan dampak perubahan).
+  * `codegraph`: Code intelligence & knowledge graph lokal untuk eksplorasi simbol, call paths, callers/callees, dan impact analysis.
 * **Token Optimization & Lean Engineering**:
   * `caveman` suite: Optimalisasi token dan respon presisi ringkas.
   * `ponytail` suite: Prinsip minimalisme kode, pemanfaatan kode eksisting, dan anti over-engineering.
@@ -20,6 +21,7 @@ Koleksi konfigurasi lengkap, terstandarisasi, dan teruji untuk **Google Antigrav
 * **Context7** (`@upstash/context7-mcp`): Referensi dokumentasi library & API signatures real-time.
 * **Playwright** (`@playwright/mcp`): Automasi browser interaktif dan debugging web UI.
 * **Graphify** (`graphify-mcp`): AST Codebase Knowledge Graph MCP daemon.
+* **CodeGraph** (`codegraph serve --mcp`): Code intelligence & knowledge graph lokal untuk eksplorasi simbol, call paths, callers/callees, dan impact analysis.
 * **GitHub** (`@modelcontextprotocol/server-github`): Integrasi pull request, issue tracking, dan branch search.
 
 ### 3. Agent Swarm
@@ -33,6 +35,8 @@ cd antigravity-ai-ecosystem
 chmod +x install.sh
 ./install.sh
 ```
+
+Script `install.sh` akan menyalin skills & konfigurasi MCP ke `~/.gemini/config/`, mempertahankan `config.json` yang sudah ada, serta menginstal dan mendaftarkan `graphify` dan `codegraph` secara global untuk Antigravity.
 
 ## 🔑 Pengaturan Token GitHub MCP
 Jika ingin mengaktifkan fungsionalitas GitHub MCP, buka file `~/.gemini/config/mcp_config.json` dan isi `GITHUB_PERSONAL_ACCESS_TOKEN` Anda dengan Personal Access Token (PAT) GitHub.

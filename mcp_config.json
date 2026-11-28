@@ -17,6 +17,13 @@
     "graphify": {
       "command": "/home/ruhyatnar/.local/bin/graphify-mcp"
     },
+    "codegraph": {
+      "command": "codegraph",
+      "args": [
+        "serve",
+        "--mcp"
+      ]
+    },
     "github": {
       "command": "npx",
       "args": [
